@@ -8,7 +8,7 @@ const GOOGLE_CREDENTIALS = process.env.GOOGLE_CREDENTIALS;
 const PORT = process.env.PORT || 3000;
 
 // Налаштування Google Sheets
-const credentials = JSON.parse(GOOGLE_CREDENTIALS || '{}');
+const credentials = require('./credentials.json');
 const auth = new google.auth.GoogleAuth({
   credentials: credentials,
   scopes: ['https://www.googleapis.com/auth/spreadsheets']
