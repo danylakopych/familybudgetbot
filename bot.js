@@ -5,6 +5,7 @@ const { google } = require('googleapis');
 const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 const GOOGLE_CREDENTIALS = process.env.GOOGLE_CREDENTIALS;
+const PORT = process.env.PORT || 3000;
 
 // Налаштування Google Sheets
 const credentials = JSON.parse(GOOGLE_CREDENTIALS || '{}');
