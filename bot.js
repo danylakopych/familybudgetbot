@@ -1,3 +1,4 @@
+require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
 const { google } = require('googleapis');
 
@@ -8,9 +9,12 @@ const GOOGLE_CREDENTIALS = process.env.GOOGLE_CREDENTIALS;
 const PORT = process.env.PORT || 3000;
 
 // Налаштування Google Sheets
-const credentials = require('./credentials.json');
 const auth = new google.auth.GoogleAuth({
-  credentials: credentials,
+  credentials: {
+    client_email: process.env.GOOGLE_CLIENT_EMAIL,
+    // Дуже важливо: замінюємо екрановані \n на реальні переноси рядків
+    private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+  },
   scopes: ['https://www.googleapis.com/auth/spreadsheets']
 });
 
