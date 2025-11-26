@@ -2,5 +2,25 @@
   "dependencies": {
     "googleapis": "^166.0.0",
     "node-telegram-bot-api": "^0.66.0"
-  }
+  },
+  "name": "familybudgetbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danylakopych/familybudgetbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/danylakopych/familybudgetbot/issues"
+  },
+  "homepage": "https://github.com/danylakopych/familybudgetbot#readme"
 }
